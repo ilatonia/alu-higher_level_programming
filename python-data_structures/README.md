@@ -17,6 +17,8 @@ This directory contains exercises on working with lists in Python 3.
 | `8-multiple_returns.py` | Returns a tuple with the length of a string and its first character (`None` if empty). |
 | `9-max_integer.py` | Finds the biggest integer of a list without using `max()`. |
 | `10-divisible_by_2.py` | Returns a list of booleans telling whether each integer of a list is a multiple of 2. |
+| `11-delete_at.py` | Deletes the item at a given index of a list, leaving the list unchanged if the index is negative or out of range. |
+| `12-switch.py` | Switches the values of `a` and `b`. |
 
 ## Requirements
 
