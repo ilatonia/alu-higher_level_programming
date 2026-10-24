@@ -8,6 +8,8 @@ This directory contains exercises on working with lists in Python 3.
 | --- | --- |
 | `0-print_list_integer.py` | Prints all integers of a list, one per line, using `str.format()`. |
 | `1-element_at.py` | Retrieves an element from a list at a given index, returning `None` if the index is negative or out of range. |
+| `2-replace_in_list.py` | Replaces an element of a list at a given index, leaving the list unchanged if the index is negative or out of range. |
+| `3-print_reversed_list_integer.py` | Prints all integers of a list in reverse order, one per line, using `str.format()`. |
 
 ## Requirements
 
