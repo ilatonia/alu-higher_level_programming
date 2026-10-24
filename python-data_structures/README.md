@@ -10,6 +10,9 @@ This directory contains exercises on working with lists in Python 3.
 | `1-element_at.py` | Retrieves an element from a list at a given index, returning `None` if the index is negative or out of range. |
 | `2-replace_in_list.py` | Replaces an element of a list at a given index, leaving the list unchanged if the index is negative or out of range. |
 | `3-print_reversed_list_integer.py` | Prints all integers of a list in reverse order, one per line, using `str.format()`. |
+| `4-new_in_list.py` | Replaces an element of a list at a given index in a copy, leaving the original list unchanged. |
+| `5-no_c.py` | Removes all characters `c` and `C` from a string. |
+| `6-print_matrix_integer.py` | Prints a matrix of integers, one row per line, with values separated by a space. |
 
 ## Requirements
 
