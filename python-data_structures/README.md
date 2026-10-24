@@ -13,6 +13,10 @@ This directory contains exercises on working with lists in Python 3.
 | `4-new_in_list.py` | Replaces an element of a list at a given index in a copy, leaving the original list unchanged. |
 | `5-no_c.py` | Removes all characters `c` and `C` from a string. |
 | `6-print_matrix_integer.py` | Prints a matrix of integers, one row per line, with values separated by a space. |
+| `7-add_tuple.py` | Adds two tuples, using only the first 2 integers of each and `0` for any missing value. |
+| `8-multiple_returns.py` | Returns a tuple with the length of a string and its first character (`None` if empty). |
+| `9-max_integer.py` | Finds the biggest integer of a list without using `max()`. |
+| `10-divisible_by_2.py` | Returns a list of booleans telling whether each integer of a list is a multiple of 2. |
 
 ## Requirements
 
