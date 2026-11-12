@@ -75,3 +75,16 @@ Integers that are 0 or negative raise a ``ValueError``:
     >>> bg.integer_validator("distance", -4)
     Traceback (most recent call last):
     ValueError: distance must be greater than 0
+
+Missing arguments raise a ``TypeError``. The exact wording of that message
+depends on the Python version, so only the exception type is compared:
+
+::
+
+    >>> bg.integer_validator()  # doctest: +IGNORE_EXCEPTION_DETAIL
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 2 required positional arguments
+
+    >>> bg.integer_validator("age")  # doctest: +IGNORE_EXCEPTION_DETAIL
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 1 required positional argument
