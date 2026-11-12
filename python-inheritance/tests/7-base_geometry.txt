@@ -1,0 +1,77 @@
+===================================
+How to Use 7-base_geometry.py
+===================================
+
+This module defines a class ``BaseGeometry`` with an ``area`` method that is
+not implemented and an ``integer_validator`` method.
+
+Usage
+=====
+
+::
+
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+    >>> bg = BaseGeometry()
+
+``area`` is not implemented:
+
+::
+
+    >>> bg.area()
+    Traceback (most recent call last):
+    Exception: area() is not implemented
+
+Valid values return nothing:
+
+::
+
+    >>> bg.integer_validator("my_int", 12)
+    >>> bg.integer_validator("width", 89)
+
+Values that are not integers raise a ``TypeError``:
+
+::
+
+    >>> bg.integer_validator("name", "John")
+    Traceback (most recent call last):
+    TypeError: name must be an integer
+
+    >>> bg.integer_validator("height", 3.5)
+    Traceback (most recent call last):
+    TypeError: height must be an integer
+
+    >>> bg.integer_validator("flag", True)
+    Traceback (most recent call last):
+    TypeError: flag must be an integer
+
+    >>> bg.integer_validator("value", None)
+    Traceback (most recent call last):
+    TypeError: value must be an integer
+
+    >>> bg.integer_validator("items", [3])
+    Traceback (most recent call last):
+    TypeError: items must be an integer
+
+    >>> bg.integer_validator("pair", (3,))
+    Traceback (most recent call last):
+    TypeError: pair must be an integer
+
+    >>> bg.integer_validator("mapping", {3, 4})
+    Traceback (most recent call last):
+    TypeError: mapping must be an integer
+
+    >>> bg.integer_validator("data", {"a": 1})
+    Traceback (most recent call last):
+    TypeError: data must be an integer
+
+Integers that are 0 or negative raise a ``ValueError``:
+
+::
+
+    >>> bg.integer_validator("age", 0)
+    Traceback (most recent call last):
+    ValueError: age must be greater than 0
+
+    >>> bg.integer_validator("distance", -4)
+    Traceback (most recent call last):
+    ValueError: distance must be greater than 0
