@@ -230,6 +230,11 @@ class TestBaseSaveToFile(BaseTestCase):
         Rectangle.save_to_file(None)
         self.assertEqual(self.read("Rectangle.json"), "[]")
 
+    def test_none_square(self):
+        """None saves an empty list for a Square too."""
+        Square.save_to_file(None)
+        self.assertEqual(self.read("Square.json"), "[]")
+
     def test_empty_list(self):
         """An empty list saves an empty list."""
         Square.save_to_file([])
