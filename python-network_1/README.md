@@ -14,11 +14,11 @@ This directory contains Python scripts that make HTTP requests, first with the `
 
 | File | Description |
 | --- | --- |
-| `0-hbtn_status.py` | Fetches `https://alu-intranet.hbtn.io/status` with `urllib` and displays the body, its type and its content |
+| `0-hbtn_status.py` | Fetches `https://intranet.hbtn.io/status` with `urllib` and displays the body, its type and its content |
 | `1-hbtn_header.py` | Takes a URL and displays the `X-Request-Id` header value of the response (`urllib`) |
 | `2-post_email.py` | Sends a POST request with an `email` parameter to a URL and displays the decoded body (`urllib`) |
 | `3-error_code.py` | Displays the decoded body of a response, or `Error code: <status>` on an `HTTPError` (`urllib`) |
-| `4-hbtn_status.py` | Fetches `https://alu-intranet.hbtn.io/status` with `requests` and displays the body, its type and its content |
+| `4-hbtn_status.py` | Fetches `https://intranet.hbtn.io/status` with `requests` and displays the body, its type and its content |
 | `5-hbtn_header.py` | Takes a URL and displays the `X-Request-Id` header value of the response (`requests`) |
 | `6-post_email.py` | Sends a POST request with an `email` parameter to a URL and displays the body (`requests`) |
 | `7-error_code.py` | Displays the body of a response, or `Error code: <status>` if the status code is 400 or more (`requests`) |
