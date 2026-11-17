@@ -1,0 +1,95 @@
+The ``5-text_indentation`` module
+=================================
+
+Using ``text_indentation``
+--------------------------
+
+Import the function:
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Two new lines are printed after each '.', '?' and ':'. The text after the
+last special character is printed without a new line, so a "|" is printed
+after it to show where it ends:
+
+    >>> text_indentation("Hello. World"); print("|")
+    Hello.
+    <BLANKLINE>
+    World|
+
+    >>> text_indentation("How? Fine: thanks. Bye"); print("|")
+    How?
+    <BLANKLINE>
+    Fine:
+    <BLANKLINE>
+    thanks.
+    <BLANKLINE>
+    Bye|
+
+A text ending with a special character ends with 2 new lines:
+
+    >>> text_indentation("Hello?")
+    Hello?
+    <BLANKLINE>
+
+    >>> text_indentation("Note: be careful.")
+    Note:
+    <BLANKLINE>
+    be careful.
+    <BLANKLINE>
+
+A text without any special character is printed as is:
+
+    >>> text_indentation("Hello"); print("|")
+    Hello|
+
+Spaces at the beginning and at the end of each printed line are removed:
+
+    >>> text_indentation("  Hello  .  World  "); print("|")
+    Hello  .
+    <BLANKLINE>
+    World|
+
+    >>> text_indentation("a.   b?   c:   d"); print("|")
+    a.
+    <BLANKLINE>
+    b?
+    <BLANKLINE>
+    c:
+    <BLANKLINE>
+    d|
+
+Consecutive special characters each get 2 new lines:
+
+    >>> text_indentation("Hi.?")
+    Hi.
+    <BLANKLINE>
+    ?
+    <BLANKLINE>
+
+    >>> text_indentation(".")
+    .
+    <BLANKLINE>
+
+An empty string, or a string with only spaces, prints nothing:
+
+    >>> text_indentation("")
+    >>> text_indentation("   ")
+
+The text must be a string:
+
+    >>> text_indentation(12)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+    >>> text_indentation(["Hello."])
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+The text is required:
+
+    >>> text_indentation()
+    Traceback (most recent call last):
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
